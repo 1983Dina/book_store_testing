@@ -13,6 +13,7 @@
 #8. Нажмите PLACE ORDER
 #9. Используя явное ожидание, проверьте что отображается надпись "Thank you. Your order has been received."
 #10. Используя явное ожидание, проверьте что в Payment Method отображается текст "Check Payments"
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -26,7 +27,8 @@ driver.maximize_window()
 #Нажмите на вкладку "Shop" и проскролльте на 300 пикселей вниз
 shop_tab=driver.find_element_by_link_text("Shop")
 shop_tab.click()
-driver.execute_script("window.scrollBy(0,300);")
+driver.execute_script("window.scrollBy(0,500);")
+
 #3. Добавьте в корзину книгу "Mastering JavaScript" (единственная книга в наличие на данный момент)
 Mastering_btn=driver.find_element_by_class_name("button.product_type_simple.add_to_cart_button.ajax_add_to_cart")
 Mastering_btn.click()
